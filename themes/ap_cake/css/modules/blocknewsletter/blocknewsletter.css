@@ -1,0 +1,95 @@
+/**
+* Transition-timing-function property@mixin 
+*/
+/*background RGBA
+============================================*/
+/****/
+/* RIGHT TO LEFT */
+/**
+ * Web Application Prefix Apply For Making Owner Styles
+ */
+/**
+ *   Blocks Layout Selectors 
+ */
+/***********************************************************************/
+/** CHECKOUT BY STEP */
+/* Block newsletter */
+#columns #newsletter_block_left .success_inline, #columns #newsletter_block_left .warning_inline {
+  text-align: left;
+  padding: 1px 0 0 0;
+  margin-bottom: -19px;
+}
+.rtl #columns #newsletter_block_left .success_inline, .rtl #columns #newsletter_block_left .warning_inline {
+  text-align: right;
+}
+#columns #newsletter_block_left .success_inline {
+  color: #418B19;
+}
+#columns #newsletter_block_left .warning_inline {
+  color: #f13340;
+}
+
+/* Block newsletter footer */
+#footer #newsletter_block_left .info-newletter {
+  margin-bottom: 30px;
+  line-height: 23px;
+  display: inline-block;
+}
+#footer #newsletter_block_left form {
+  width: 100%;
+  position: relative;
+}
+#footer #newsletter_block_left form input[type="text"] {
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  color: #615e5f;
+  height: 40px;
+  width: 75%;
+  margin-right: 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  float: left;
+}
+.rtl #footer #newsletter_block_left form input[type="text"] {
+  margin-left: 5px;
+  margin-right: inherit;
+}
+.rtl #footer #newsletter_block_left form input[type="text"] {
+  float: right;
+}
+@media (max-width: 1024px) {
+  #footer #newsletter_block_left form input[type="text"] {
+    width: 65%;
+  }
+}
+#footer #newsletter_block_left form .btn {
+  color: white;
+  height: 40px;
+  width: 60px;
+  border: none;
+  padding: 0;
+  background: #e47277;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+#footer #newsletter_block_left form .btn .fa {
+  font-size: 17px;
+}
+#footer #newsletter_block_left form .btn span {
+  display: none;
+}
+#footer #newsletter_block_left .warning_inline {
+  color: #f13340;
+  clear: both;
+}
+#footer #newsletter_block_left .success_inline {
+  color: #418B19;
+}

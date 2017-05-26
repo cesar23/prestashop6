@@ -1,0 +1,109 @@
+/******************************************************
+ * $package Leo Theme Framework for Leo THeme 1.6.x
+ * $version 1.1
+ * $author http://www.leotheme.com
+ * $copyright   Copyright (C) Augus 2013 PavoThemes.com <$emai:leotheme$gmail.com>.All rights reserved.
+ * $license     GNU General Public License version 2
+ *******************************************************/
+ // layout.scss
+
+@import "vars/layout.vars";
+body{
+    &.layout-boxed-md{
+        background: $white;
+        #page{  
+            max-width: $container-desktop + 20px; 
+            @include box-shadow(0 0 5px lighten($gray, 50%));
+            margin: 0 auto;    
+            background: $white;
+            .container {
+                max-width: $container-desktop;
+            }
+        }  
+        
+    }
+    &.layout-boxed-lg{
+        background: $white;
+        #page{  
+            max-width: $container-lg + 20px; 
+            @include box-shadow(0 0 5px lighten($gray, 50%));
+            margin: 0 auto;    
+            background: $white;
+            .container {
+                max-width: $container-lg;
+            }
+        }
+    }
+} 
+
+.container{
+    position: relative;
+}
+#page{
+    overflow: hidden;
+}
+/*
+* HEADER 
+*/
+ 
+#topbar  {
+    min-height: $topbar-height;
+    font-size: $topbar-font-size;
+    background: $topbar-outside-bg;
+    .container{
+        @include container-layout-variant($topbar-color, $topbar-bg);  
+    }
+    .links{  
+        padding: 11px 0 9px;      
+    } 
+    .inner{
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        @include clearfix();
+    }
+    &:before{
+        content:"";
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        background: rgba(115,118,240,1);
+        background: -moz-linear-gradient(58deg, rgba(115,118,240,1) 0%, rgba(47,231,190,1) 150%);
+        background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(115,118,240,1)), color-stop(150%, rgba(47,231,190,1)));
+        background: -webkit-linear-gradient(58deg, rgba(115,118,240,1) 0%, rgba(47,231,190,1) 150%);
+        background: -o-linear-gradient(58deg, rgba(115,118,240,1) 0%, rgba(47,231,190,1) 150%);
+        background: -ms-linear-gradient(58deg, rgba(115,118,240,1) 0%, rgba(47,231,190,1) 150%);
+        background: linear-gradient(58deg, rgba(115,118,240,1) 0%, rgba(47,231,190,1) 150%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7376f0', endColorstr='#2fe7be', GradientType=1 );
+    }
+}
+
+ 
+#header-main{
+   background: $headermain-outside-bg;
+   .container{
+        @include container-layout-variant($headermain-color, $headermain-bg); 
+        a.btn{
+            color: $white;            
+            &:hover{color: $white;}
+        }
+    }
+    &.mini-navbar{ // float header
+        .container{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+}
+
+#slideshow{
+    margin-bottom: 50px;
+}
+
+/* FOOTER */
+#footer{
+    @include clearfix();
+    background: $footer-outside-bg;
+    .container{
+        @include container-layout-variant($footer-color, $footer-bg);   
+    } 
+}

@@ -1,0 +1,87 @@
+.carousel-control{
+  z-index: 10;
+  height: 24px;
+  background: none !important;
+  @include opacity(1);
+  left: auto;
+  top: -70px;
+  font-size: 0px;
+  text-align: center;
+  line-height: 24px;
+  &:before{
+    content: '\f2ee';
+    font-family: 'Material-Design-Iconic-Font';
+    color: $carousel-control-color;
+    font-size: $carousel-control-font-size;
+    text-shadow: $carousel-text-shadow;
+  }
+  &.left{
+    right: 30px;
+    margin-right: 10px;
+    &:before{
+      content: "\f2ea";
+    }
+  }
+  &:hover{
+    &:before{color: $theme-color-default;}
+  }
+}
+.form-control {
+  @include border-radius(0);
+  &:focus{
+    @include box-shadow(none);
+  }
+}
+
+//@mixin button-variant-outline($color, $background, $border, $colorhover, $bghover, $borderhover ) {
+.btn-inverse{
+  @include button-variant-outline($white, $theme-color-default, $theme-color-default, $white, #3a3838, #3a3838);
+} 
+.btn-outline{
+  @include button-variant-outline($white, #3a3838, #3a3838, $white, $theme-color-default, $theme-color-default );
+}
+.btn{
+  @include border-radius(3px);
+  padding: 9px 20px;
+  &:active, 
+  &:focus, 
+  &:visited,
+  &.active:focus {
+    outline: none !important;
+  }
+  &.btn-arrow-right{
+    position: relative;
+    &:before {
+        content: "\f2ee";
+        font-family: 'Material-Design-Iconic-Font';
+        display: inline-block;
+        position: absolute;
+        @include rtl-right(10px);
+        line-height: 20px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+      }
+    &:after {
+      content: "";
+      position: absolute;
+      @include rtl-right(30px);
+      width: 2px;
+      height: 19px;
+      background: #ededed;
+    }
+  }
+}
+.rtl .btn.btn-arrow-right:before{
+  content: "\f2ea";
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0; 
+}
+input[type=number] {
+  -moz-appearance:textfield;
+}

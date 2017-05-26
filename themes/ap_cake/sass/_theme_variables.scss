@@ -1,0 +1,117 @@
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "mixins/theme";
+
+/**
+ * Web Application Prefix Apply For Making Owner Styles
+ */
+$app-brand-prefix        : leo !default;
+
+/**
+ *   Blocks Layout Selectors 
+ */
+$block-prefix 			 : block!default;
+$block-selector          : block !default;
+$block-heading-selector  : title_block !default;
+$block-content-selector  : block_content !default;
+
+//------- Path Variables
+$image-path:                   "images/"!default; 
+$font-custom-path:             "../fonts/"!default; 
+$image-theme-base-path:        "../img/"!default;
+$image-base-path:              "../../../img/"!default;
+$image-module-path:            "../../../img/icon/"!default; 
+$module-path:                  "../../../modules/"!default;  
+
+$theme-font-path	   :          	 "../fonts/" !default; 
+
+
+/***********************************************************************/
+// some basic colors
+
+$white:			 				    #FFFFFF !default; 
+$black:							    #000000 !default;
+$blue:                              #6087D2 !default;  // Skin blue
+$wild-sand:                         #ffffff !default;  
+$silver:                            #f5f5f5 !default;  
+$red:            					#ff0000!default;
+$red-light:            				#ff9999!default;
+$yellow-light:           			#ffdc73!default;
+$nocolor:							transparent!default;
+
+// Variables paths 
+// ========================================================================
+$font-family-tertiary  :             $font-family-base !default;		// font for menu
+$font-family-septenary : 			 "Pacifico" !default; 		// font for slideshow
+$font-family-senary    : 		 	 $font-family-base !default;		// font for Price
+
+$font-icon 	   : 			 "FontAwesome" !default;
+
+//////////////////// Variables defined for Themes + Skins //////////////// 
+
+$theme-color-default : 			    #e47277 !default;
+$theme-color-secondary :			$black !default;
+$theme-color-tertiary:              #010101 !default;
+
+//-------- BORDERS
+$border-color:						#ededed !default;
+$main-border:						1px solid $border-color !default;
+$main-border-hover:                 1px solid $theme-color-secondary!default;
+
+//--------- BACKGROUNDS
+$dark-background:                   $black!default;
+$light-background:                  $white!default;
+
+/** CHECKOUT BY STEP */
+$checkout-step-container-border: 		solid 1px  $border-color!default;
+$checkout-step-container-margin: 		30px !default;
+$checkout-step-font-size: 				18px !default;
+$checkout-step-font-color : 			$black !default;
+$checkout-step-button-bg: 				$nocolor !default; 
+$checkout-step-button-padding: 			10px 15px;  
+
+// product page
+
+// product list
+
+//
+// Variables
+// --------------------------------------------------
+$rtl-left : left;
+$rtl-right : right;
+
+@mixin deal-bg-color{
+	&:before,&:after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    &:before{
+        background-position: 0 0, 0 100% ;
+        background-repeat: no-repeat;
+        -webkit-background-size: 100% 2px;
+        -moz-background-size: 100% 2px;
+        background-size: 100% 2px;
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9Imxlc3NoYXQtZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMzYWNmZDUiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzNhOGVkNSIgc3RvcC1vcGFjaXR5PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9Imxlc3NoYXQtZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjEwMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMzYTRlZDUiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzNhOGVkNSIgc3RvcC1vcGFjaXR5PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=);
+        background-image: -webkit-linear-gradient(to right, #e47277 0%, #db6f73 100%), -webkit-linear-gradient(to left, #5d3b3c 0%, #db6f73 100%);
+        background-image: -moz-linear-gradient(to right, #e47277 0%, #db6f73 100%), -moz-linear-gradient(to left, #5d3b3c 0%, #db6f73 100%);
+        background-image: -o-linear-gradient(to right, #e47277 0%, #db6f73 100%), -o-linear-gradient(to left, #5d3b3c 0%, #db6f73 100%);
+        background-image: linear-gradient(to right, #e47277 0%, #db6f73 100%), linear-gradient(to left, #5d3b3c 0%, #db6f73 100%);
+    }
+    &:after{
+        background-position: 0 0, 100% 0;
+        background-repeat: no-repeat;
+        -webkit-background-size: 2px 100%;
+        -moz-background-size: 2px 100%;
+        background-size: 2px 100%;
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9Imxlc3NoYXQtZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMzYWNmZDUiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzNhOGVkNSIgc3RvcC1vcGFjaXR5PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9Imxlc3NoYXQtZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjAlIiB5Mj0iMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMzYTRlZDUiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzNhOGVkNSIgc3RvcC1vcGFjaXR5PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=);
+        background-image: -webkit-linear-gradient(top, #e47277 0%, #db6f73 100%), -webkit-linear-gradient(to top, #5d3b3c 0%, #db6f73 100%);
+        background-image: -moz-linear-gradient(top, #e47277 0%, #db6f73 100%), -moz-linear-gradient(to top, #5d3b3c 0%, #db6f73 100%);
+        background-image: -o-linear-gradient(top, #e47277 0%, #db6f73 100%), -o-linear-gradient(to top, #5d3b3c 0%, #db6f73 100%);
+        background-image: linear-gradient(to bottom, #e47277 0%, #db6f73 100%), linear-gradient(to top, #5d3b3c 0%, #db6f73 100%);
+    }
+}

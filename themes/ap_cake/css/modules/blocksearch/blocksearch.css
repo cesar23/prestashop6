@@ -1,0 +1,89 @@
+/**
+* Transition-timing-function property@mixin 
+*/
+/*background RGBA
+============================================*/
+/****/
+/* RIGHT TO LEFT */
+/**
+ * Web Application Prefix Apply For Making Owner Styles
+ */
+/**
+ *   Blocks Layout Selectors 
+ */
+/***********************************************************************/
+/** CHECKOUT BY STEP */
+.ac_results {
+  background: white;
+  border: 1px solid #ededed;
+  width: 271px;
+  margin-top: -1px;
+}
+.ac_results li {
+  padding: 0 10px;
+  font-weight: normal;
+  color: #686666;
+  font-size: 13px;
+  line-height: 22px;
+}
+.ac_results li.ac_odd {
+  background: white;
+}
+
+.block-search .btn-group {
+  display: none;
+}
+.block-search #search_block_top .button-close {
+  display: none;
+}
+
+#search_block_top {
+  position: relative;
+}
+
+form#searchbox {
+  width: 100%;
+  z-index: 10;
+}
+form#searchbox label {
+  color: dimgrey;
+}
+form#searchbox input.search_query {
+  max-width: 100%;
+  height: 40px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #999999;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 42px;
+  padding: 0px 50px 0 15px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  border-radius: 40px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.rtl form#searchbox input.search_query {
+  padding: 0px 15px 0 50px;
+}
+form#searchbox .button-search {
+  background: none;
+  border: none;
+  top: 0px;
+  position: absolute;
+  color: #56a6db;
+  font-size: 14px;
+  width: 40px;
+  height: 40px;
+  right: 8px;
+}
+.rtl form#searchbox .button-search {
+  left: 8px;
+  right: auto;
+}
+form#searchbox .button-search:hover {
+  color: #e47277;
+}

@@ -1,0 +1,41 @@
+// footer.scss
+@import "vars/footer.vars";
+
+#footer{
+    a{color: $footer-color;
+        &:hover{color: $link-hover-color;}
+    }
+    .title_block{
+    	text-transform: uppercase;
+    	color: $theme-color-default;
+    } 
+}
+.footer-block{
+	margin-top: 40px;
+}
+.footer-top{
+	padding-top: 35px;
+	padding-bottom: 55px;	
+}
+.footer-bottom{
+	padding-bottom: 20px;
+	padding-top: 20px;
+	.copyright{
+		.block{margin: 0;}
+		p{margin: 0;}
+		a{
+			color: $theme-color-default;
+			&:hover{
+				color: $white;
+			}
+		}
+		@media (max-width: $screen-sm-max) { // max 991px
+			text-align: center;
+		}
+	}
+	.ApImage.payment{
+		@media (max-width: $screen-sm-max) { // max 991px
+			text-align: center;
+		}
+	}
+}

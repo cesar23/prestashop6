@@ -1,0 +1,233 @@
+@import "compass";
+@import "theme_variables";
+
+@media (max-width: 1500px) and (min-width: 1025px) {
+	.container{
+		width: auto;
+	}
+}
+@media (max-width: 1196px) and (min-width: 992px) {
+	//Theme config live
+	.editortool .label-customize {display: none;}
+} 
+@media (min-width: $screen-lg) { // min 1200px
+
+	//GUEST TRACKING
+	#guestTracking {
+		.form-group {
+      		overflow: hidden;
+	      	i {
+	        	@include rtl-padding-left(10px);
+	      	}
+    	}
+    	.form-control {
+      		@include rtl-float-left();
+    	}
+    	label {
+      		@include rtl-float-left();
+      		clear: both;
+     		width: 100%;
+    	}
+	}
+}
+@media (max-width: $screen-md-max) { // max 1199px
+  	//Zoom
+  	.zoomdiv {
+    	display: none !important;
+  	}
+  	/* Product List */
+  	.product-block{
+  		.box-buttons{
+        	> div{
+        		&.cart{
+        			a{
+        				padding: 9px;
+        			}
+        		}
+        	}
+        }
+  	}
+}
+@media (max-width: 1024px) { // max 1024px
+	/* Block Cart */
+	#layer_cart{width: 100%;}
+
+	/* Menu Sidebar */
+	#leo-verticalmenu{
+		.title_block{
+			@include rtl-padding(20px, 20px, 10px, 20px);
+		}
+	}
+	div.verticalmenu{
+		.navbar-nav {
+			margin-bottom: 20px;
+			> li {
+				> a{
+					@include rtl-padding(8px, 10px, 8px, 35px);
+					&:before{
+						@include rtl-left(20px);
+					}
+				}
+			}
+		}
+	}
+	.latest-blogs{
+		.blog-container{
+			.image{
+				float: none;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+@media (max-width: 1007px) { // max 1007px
+	.header_user_info{
+		&.popup-over{
+			@include rtl-float-right();
+		}
+		.popup-title{
+		  	display: inline-block;
+		}
+		.popup-content{
+			@include rtl-left(auto);
+			@include rtl-right(0);
+		}
+	}
+	.popup-over{
+		@include rtl-float-left();
+	}
+}
+
+@media (max-width: $screen-sm-max - 1) { // max 990px
+	/* Menu Canvas */
+	html {background:none;}
+	.navbar-header .navbar-toggle{
+		display: block;
+		@include rtl-float-left();
+		margin: 0;
+		width: 40px;
+	}
+	.collapse.navbar-collapse  {
+	  	display: none!important
+	}
+	.navbar-nav {
+		float: none;
+		> li {
+		   float: none;
+	  	}
+	}	
+	/* Sidebar menu */
+	.float-vertical.active{
+		> .block_content{
+			position:relative;		
+		}
+	} 
+	#leo-verticalmenu .open > .dropdown-menu {
+		max-width: 100%;
+		position: relative;
+		left: auto !important;
+		width: 100% !important;
+		top: 100%;
+		background: $white;
+		@include box-shadow(0px 0px 5px 0px rgba(0, 0, 0, 0.35));
+	}
+	div.verticalmenu .navbar-nav{
+		margin: 0;
+	}
+	.dropdown-menu > li > a{padding: 3px 0;}
+	.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
+		background: transparent;
+	}
+	/* Header */
+	#header_logo{
+		text-align: center;
+		img{
+			display: inline-block;
+			margin-bottom: 20px;
+		}
+	}
+	ul.links li .fa, ul.links li .icon{
+		width: 10px;
+	}
+	/* Widget */
+	.ApColumn{
+	  .block{margin-bottom: 30px;}
+	}
+	.latest-blogs{
+		.blog-container{
+			.image{
+				@include rtl-float-left();
+			}
+		}
+	}
+}
+
+@media (max-width: $screen-xs-max) { // max 767px
+	.ApColumn{
+	  .block{margin-bottom: 20px;}
+	}
+	#slideshow{margin-bottom: 20px;}
+}
+@media (max-width: 667px){
+	#reinsurance-block .feature-box{
+		@include rtl-padding(30px, 30px, 30px, 0);
+	}
+}
+@media (max-width: 568px) { // max 568px
+	/* Slideshow */
+	.iview-directionNav{
+		a{
+			width: 22px;
+			height: 40px;
+			&:before{
+				line-height: 40px;
+			}
+		}
+	}
+	.product-deal-group .ApBlockLink ul li{
+		@include rtl-border-right(none);
+	}
+	.latest-blogs{
+		.image{
+			@include rtl-margin-right(0px);
+			float: none !important;
+		}
+	}
+}
+@media (max-width: $screen-xs) { // max 480px
+	#layer_cart .layer_cart_cart .button-container{
+		text-align: center;
+	}
+	#layer_cart .layer_cart_cart .button-container .btn{
+		float: none!important;
+		margin-bottom: 10px;
+	}
+	#header{
+		.cart_block{
+			width: 280px;
+		}
+	}
+	.search_top, .column-fix {
+		margin-bottom: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	#cart{
+		top: 50px;
+		z-index: 9;
+		@include rtl-text-align-left();
+		.heading{
+			background: none;
+			@include rtl-padding-left(20px);
+			&:before{
+				background: none;
+				content: "\f07a";
+				font-family: $font-icon;
+				font-size: 16px;
+				width: auto;
+				height: auto;
+				top: 6px;
+			}
+		}
+	}
+}

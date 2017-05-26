@@ -1,0 +1,121 @@
+@import "compass";
+@import "theme_variables";
+
+/**********************
+	HOME 6
+	**********************/
+	/* Block */
+	#index{
+		.sidebar{
+			.block{
+				.title_block{
+					border: none;
+				}
+			}
+		}
+	}
+
+	/* Widget */
+	.group-home6{
+		.title_block{
+			font-size: 22px;
+			@include rtl-margin(0,0,40px,20px);
+			text-transform: none;
+			color: #5d3b3c;
+		}
+	}
+	.product-deal-group{
+		.title_block{
+			text-align: center;
+		}
+	}
+	.footer-container {
+		.ApColumn{
+			.block{
+				&.latest-blogs{
+					margin-bottom: 60px;
+				}
+			}
+		}
+	}
+	.latest-blogs {
+		border-top: $main-border;
+		padding-top: 50px;
+		.image{
+			@include rtl-margin-right(20px);
+			img{
+				@include rounded-corners(2px);
+				margin: auto;
+			}
+		}
+		.blog-title{
+			margin-top: 0;
+		}
+		.blog-readmore{
+			display: none;
+		}
+	}
+	#index{
+		.sidebar{
+			.ApColumn{
+				.block{
+					&.products_block{
+						&.sale-off{
+							margin-bottom: 20px;
+						}
+						&.feature-products{
+							margin-bottom: 30px;
+						}
+					}
+					&.img_anim {
+						margin-bottom: 60px;
+					}
+				}
+			}
+		}
+	}
+	#reinsurance-block{
+		border-bottom: none;
+		margin: 0;
+		.latest-blogs {
+			margin-bottom: 50px;
+		}
+	}
+	/* Slideshow */
+	.iview-controlNav{
+		div.iview-items {
+			@include rtl-left(0);
+		}
+	}
+	/* Megamenu */
+	#leo-megamenu{
+		border-bottom: $main-border;
+		margin-bottom: 40px;
+	}
+	/* Sidebar menu  */
+	#leo-verticalmenu{
+		margin-bottom: 20px;
+	}
+	div.verticalmenu{
+		.navbar-nav{
+			padding-bottom: 51px;
+			> li{
+				a{
+					padding: 10px 10px 10px 60px;
+				}
+			}
+		}
+	}
+	/* Responsive */
+	@media (max-width: 1300px) and (min-width: 1024px) {
+		div.verticalmenu{
+			.navbar-nav{
+				padding-bottom: 20px;
+				> li{
+					a{
+						@include rtl-padding(8px, 10px, 8px, 35px);
+					}
+				}
+			}
+		}
+	}
